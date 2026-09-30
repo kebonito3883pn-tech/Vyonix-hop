@@ -1,0 +1,45 @@
+-- VYONIX HUB - Fruit Finder | by vyonixscriptofficial
+-- TikTok Oficial: @vyonixscriptofficial
+
+getgenv().VyonixHub = {
+    HubName = "VYONIX HUB V1",
+    Creator = "vyonixscriptofficial",
+    TikTok = "@vyonixscriptofficial",
+    Team = "Marines",
+    BlacklistFruits = {},
+    Config = {
+        NotificationAboveJump = true,
+        ESP = true,
+        ShowDistance = true,
+        AutoTween = false,
+        TweenSpeed = 130
+    },
+    Hop = {
+        Enabled = true,
+        Delay = 8,
+        UsingHopApi = true -- Fix 773
+    },
+    Webhook = {
+        Enabled = false,
+        Url = ""
+    }
+}
+
+-- VYONIX HUB UI
+local player = game.Players.LocalPlayer
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+
+local gui = Instance.new("ScreenGui", gethui and gethui() or player.PlayerGui)
+gui.Name = "VyonixHub"
+gui.ResetOnSpawn = false
+
+-- Logo / Titulo VYONIX
+local title = Instance.new("TextLabel", gui)
+title.Size = UDim2.new(0,200,0,30)
+title.Position = UDim2.new(0.5,-100,0,20)
+title.BackgroundTransparency = 1
+title.Text = "VYONIX HUB"
+title.TextColor3 = Color3.fromRGB(0,255,255)
+title.TextSize = 22
+title.Font = Enum.Font.Goth
